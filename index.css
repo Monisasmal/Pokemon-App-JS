@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url(https://mahdisohaily.github.io/Leaderboard/images/pattern-hills.svg), hsl(235deg 20.15% 21.09%);
+    ;
+    background-repeat: no-repeat;
+    background-size: contain,cover;
+    background-position: bottom;
+    color: white;
+    /* height: 100vh; */
+}
+.main{
+    background: url(https://mahdisohaily.github.io/Leaderboard/images/bg-stars.svg);
+    width: 100%;
+    margin: 20px;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.filter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0px;
+}
+.filter select{
+ padding: 10px;
+ font-size: 16px;
+ font-weight: 700;
+ border: none;
+ border-radius: 10px;
+ 
+}
+#filter{
+    padding: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px; 
+    margin-left: -10px; 
+}
+.filter input{
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;  
+}
+#reset{
+    padding: 10px;
+ font-size: 14px;
+ font-weight: 700;
+ border: none;
+ border-radius: 10px;
+}
+#reset a{
+    text-decoration: none;
+}
+
+/* for card */
+
+#pokemon_card_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card{
+    margin: 20px;
+    width: 200px;
+    height: 280px;
+    text-align: center;
+    justify-content: center;
+    /* perspective: 1000px; */
+    opacity: 0.95;
+   
+}
+.cardInner{
+    box-shadow: 1px 1px 2px 2px #ccc;
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: 1s;
+    transform-style: preserve-3d;
+    
+}
+.card:hover .cardInner{
+    transform: rotateY(180deg);
+}
+.cardFornt {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: 20px 0;
+}
+.back-card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+.cardFornt .id{
+    background-color: rgba(0,0,0,0.5);
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px 15px; 
+    border-radius: 10px;
+}
+
+.cardFornt img{
+    position: relative;
+    top: 10px;
+    /* height: 100px; 
+    width: 100px; */
+}
+.cardFornt .name{
+    margin-top: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.cardFornt .type{
+    display: block; 
+    width: fit-content; 
+    margin: 10px auto; 
+    padding: 10px 15px; 
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 5px; 
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+}
+.back-card img{
+   margin-top: 40px;
+}
+.back-card .name{
+    margin-top: 0px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.back-card .namee{
+    margin-top: 10px;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+@media (max-width:480px){
+    .filter{
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+        font-size: 16px;
+    }
+}
